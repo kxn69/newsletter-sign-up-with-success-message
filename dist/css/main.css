@@ -1,0 +1,143 @@
+@font-face {
+  font-family: "Roboto";
+  src: url(../assets/fonts/Roboto-Regular.ttf) format("ttf");
+  font-weight: normal;
+  font-size: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url(../assets/fonts/Roboto-Bold.ttf) format("ttf");
+  font-weight: bold;
+  font-size: normal;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  background: hsl(235, 18%, 26%);
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  font-family: Roboto, sans-serif;
+}
+
+.form {
+  background: hsl(0, 0%, 100%);
+  padding: 20px;
+  display: grid;
+  gap: 10px;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  border-radius: 30px;
+  grid-template-areas: "form-container svg-hero";
+}
+.form .form-info {
+  grid-area: form-container;
+  padding: 20px;
+  max-width: 400px;
+}
+.form .form-info .heading {
+  color: hsl(234, 29%, 20%);
+  font-size: 3.4rem;
+  margin: auto;
+}
+.form .form-info p {
+  font-size: 16px;
+}
+.form .form-info .checklist {
+  margin: 0;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+}
+.form .form-info h6 {
+  margin-bottom: 5px;
+}
+.form .form-info input {
+  border-radius: 5px;
+  width: 100%;
+  height: 40px;
+  margin-bottom: 20px;
+  padding: 10px;
+  cursor: pointer;
+}
+.form .form-info input[type=email] {
+  border: 2px solid hsl(231, 7%, 60%);
+  cursor: pointer;
+}
+.form .form-info input[type=email]:focus {
+  outline: none;
+}
+.form .form-info input[type=submit] {
+  border: none;
+  background: hsl(234, 29%, 20%);
+  color: hsl(0, 0%, 100%);
+  font-family: Roboto, sans-serif;
+  font-weight: 700;
+}
+.form .form-info input[type=submit]:hover {
+  background: hsl(4, 100%, 67%);
+}
+.form .illustration {
+  grid-area: svg-hero;
+  width: 100%;
+  height: 100%;
+  right: 0;
+}
+.form .illustration2 {
+  display: none;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 768px) {
+  .form .form-info .heading {
+    font-size: 1.5rem;
+  }
+  .form .form-info p {
+    font-size: 12px;
+  }
+}
+@media (max-width: 500px) {
+  .form {
+    border-radius: 0;
+    width: 100vw;
+    height: 100vh;
+    grid-template-columns: 1fr;
+    margin: 0;
+    padding: 0;
+    gap: 0;
+    grid-template-areas: "svg-hero" "form-container";
+  }
+  .form .form-info .heading {
+    font-size: 2.5rem;
+  }
+  .form .form-info p {
+    font-size: 16px;
+  }
+  .form .illustration {
+    display: none;
+  }
+  .form .attribution {
+    padding: 10px;
+    font-size: 14px;
+  }
+  .form::before {
+    content: url(/assets/images/illustration-sign-up-mobile.svg);
+    height: 100%;
+    width: 100%;
+  }
+}/*# sourceMappingURL=main.css.map */
