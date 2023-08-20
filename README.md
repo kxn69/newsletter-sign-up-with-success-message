@@ -38,8 +38,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Solution](https://github.com/kxn69/newsletter-sign-up-with-success-message)
+- Live Site URL: [Live site url](https://kxn69.github.io/newsletter-sign-up-with-success-message/)
 
 ## My process
 
