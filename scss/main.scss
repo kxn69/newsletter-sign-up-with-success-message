@@ -48,11 +48,11 @@ body {
     .form-info {
         grid-area: form-container;
         padding: 20px;
-        max-width: 400px;
+        max-width: 360px;
 
         .heading {
             color: $button-color;
-            font-size: 3.4rem;
+            font-size: 3.2rem;
             margin: auto;
         }
 
@@ -68,8 +68,17 @@ body {
             column-gap: 10px;
         }
 
-        h6 {
+        .email-warn {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        h5 {
             margin-bottom: 5px;
+        }
+
+        .error-msg {
+            color: $button-active;
         }
 
         input {
@@ -84,6 +93,13 @@ body {
         input[type="email"] {
             border: 2px solid $text-box;
             cursor: pointer;
+        }
+
+        input[type="email"].warn {
+            border-color: $button-active;
+            background: hsl(4, 100%, 67%, 0.2);
+            caret-color: $button-active;
+            color: $button-active;
         }
 
         input[type="email"]:focus {
@@ -124,6 +140,50 @@ body {
     }
 }
 
+// Success Message
+
+.success-message::before {
+    content: url(/assets/images/icon-success.svg);
+}
+
+
+.success-message {
+    background: $form-background;
+    width: 360px;
+    height: 400px;
+    padding: 30px;
+    border-radius: 30px;
+
+    h1 {
+        font-size: 40px;
+        margin: 10px auto;
+    }
+
+    p {
+        font-size: 14px;
+        margin: 20px auto;
+    }
+
+    button {
+        border: none;
+        border-radius: 10px;
+        background: $button-color;
+        width: 100%;
+        padding: 20px;
+        font-family: Roboto, sans-serif;
+        font-weight: 700;
+        font-size: 16px;
+        color: $form-background;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background: $button-active;
+    }
+}
+
+// Media Query
+
 @media (max-width: 768px) {
     .form {            
         .form-info {
@@ -139,12 +199,15 @@ body {
 }
 
 @media (max-width: 500px) {
+    body {
+        background: $form-background;
+    }
+
     .form {
         border-radius: 0;
         width: 100vw;
-        height: 100vh;
+        min-height: 100vh;
         grid-template-columns: 1fr;
-        margin: 0;
         padding: 0;
         gap: 0;
 
@@ -159,6 +222,10 @@ body {
 
             p {
                 font-size: 16px;
+            }
+
+            input {
+                height: 50px;
             }
         }
 
@@ -177,4 +244,29 @@ body {
         height: 100%;
         width: 100%;
     }
+
+    .success-message {
+        height: 80vh;
+        padding-top: 80px;
+
+        h1 {
+            font-size: 48px;
+            margin: 30px auto;
+        }
+
+        p {
+            font-size: 15px;
+            margin: 30px auto;
+        }
+
+        button {
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 90vw;
+            bottom: 30px;
+        }
+    }
 }
+
