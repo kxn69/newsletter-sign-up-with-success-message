@@ -1,5 +1,6 @@
 /* eslint-disable space-before-function-paren */
 /* eslint-disable semi */
+
 const formContainer = document.querySelector('.form');
 const successMessage = document.querySelector('.success-message')
 const form = document.querySelector('form');
@@ -10,12 +11,10 @@ const dismissBtn = document.querySelector('.dismiss-btn');
 
 function handleInput(e) {
   const input = e.target;
-  console.log(input)
   const userEmail = e.target.value;
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   if (!(userEmail.length >= 1)) {
-    console.log('ddd')
     input.classList.remove('warn');
     submitButton.disabled = true;
   } else if (!emailRegex.test(userEmail)) {
@@ -38,8 +37,7 @@ function handleForm(e) {
   successMessage.hidden = false;
 }
 
-function handleDismissBtn(e) {
-  console.log(e.target)
+function handleDismissBtn() {
   successMessage.hidden = true;
   formContainer.style.display = 'grid';
 }
