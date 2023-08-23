@@ -15,7 +15,6 @@ This is a solution to the [Newsletter sign-up form with success message challeng
   - [Useful resources](#useful-resources)
 - [Author](#author)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
   This is a newsletter sign up form challenge by frontend mentors
@@ -38,8 +37,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution](https://github.com/kxn69/newsletter-sign-up-with-success-message)
-- Live Site URL: [Live site url](https://kxn69.github.io/newsletter-sign-up-with-success-message/)
+- Solution URL: [GitHub Solution](https://github.com/kxn69/newsletter-sign-up-with-success-message )
+- Live Site URL: [Github Live Site](https://kxn69.github.io/newsletter-sign-up-with-success-message/)
 
 ## My process
 
